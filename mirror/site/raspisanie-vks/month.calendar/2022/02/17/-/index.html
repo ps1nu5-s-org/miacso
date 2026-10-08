@@ -1,0 +1,1120 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="ru-ru">
+<head>
+    <base href="https://miacso.ru/raspisanie-vks/month.calendar/2022/02/17/-" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="rights" content="© 2022 ГАУ СО &quot;Центр цифровой трансформации здравоохранения&quot;" />
+	<meta name="robots" content="noindex,nofollow" />
+	<meta name="generator" content="MIACSO" />
+	<title>МИАЦ Свердловской области - Видеоконференция</title>
+	<link href="https://miacso.ru/index.php?option=com_jevents&amp;task=modlatest.rss&amp;format=feed&amp;type=rss&amp;Itemid=244&amp;modid=0" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+	<link href="https://miacso.ru/index.php?option=com_jevents&amp;task=modlatest.rss&amp;format=feed&amp;type=atom&amp;Itemid=244&amp;modid=0" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+	<link href="/templates/new_shablon_osnov_5_16_norm/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/media/com_jevents/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="/media/com_jevents/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+	<link href="/components/com_jevents/assets/css/eventsadmin.css?3.4.49" rel="stylesheet" type="text/css" />
+	<link href="/components/com_jevents/views/alternative/assets/css/events_css.css?3.4.49" rel="stylesheet" type="text/css" />
+	<link href="https://miacso.ru/media/coalawebtraffic/modules/traffic/css/cwt-base.css" rel="stylesheet" type="text/css" />
+	<link href="https://miacso.ru/media/coalawebtraffic/modules/traffic/counter-themes/users/css/cw-visitors.css" rel="stylesheet" type="text/css" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"70cd54c154dc4e204df05f3a4c13d9cf","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/system/js/core.js?5afb64205f8b5f85ba3c4448aac10969" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js?5afb64205f8b5f85ba3c4448aac10969" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?5afb64205f8b5f85ba3c4448aac10969" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?5afb64205f8b5f85ba3c4448aac10969" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?5afb64205f8b5f85ba3c4448aac10969" type="text/javascript"></script>
+	<script src="/components/com_jevents/assets/js/jQnc.js?3.4.49" type="text/javascript"></script>
+	<script src="/components/com_jevents/assets/js/view_detailJQ.js?3.4.49" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-core.js?5afb64205f8b5f85ba3c4448aac10969" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-more.js?5afb64205f8b5f85ba3c4448aac10969" type="text/javascript"></script>
+	<script type="text/javascript">
+checkJQ();jQuery(document).ready(function()
+			{
+				if ({"animation":false,"html":true,"placement":"top","selector":false,"title":"","trigger":"hover focus","content":"","delay":{"show":150,"hide":150},"container":"#jevents_body","mouseonly":false}.mouseonly && 'ontouchstart' in document.documentElement) {
+					return;
+				}
+				if (jQuery('.hasjevtip').length){
+					jQuery('.hasjevtip').popover({"animation":false,"html":true,"placement":"top","selector":false,"title":"","trigger":"hover focus","content":"","delay":{"show":150,"hide":150},"container":"#jevents_body","mouseonly":false});
+				}
+			});
+(function($) {
+    var oldHide = $.fn.popover.Constructor.prototype.hide;
+
+    $.fn.popover.Constructor.prototype.hide = function() {
+        // Bootstrap 4
+        if (this.config)
+        {
+	        if (this.config.container == '#jevents_body' && this.config.trigger.indexOf('hover') >=0) {
+	            var that = this;
+	            // try again after what would have been the delay
+	            setTimeout(function() {
+	                return that.hide.call(that, arguments);
+	            }, that.config.delay.hide);
+	            return;
+	        }
+        }
+        // Earlier Bootstraps 
+        else
+        {
+	        if (this.options.container == '#jevents_body' && this.options.trigger.indexOf('hover') >=0  && this.tip().is(':hover')) {
+	            var that = this;
+	            // try again after what would have been the delay
+	            setTimeout(function() {
+	                return that.hide.call(that, arguments);
+	            }, that.options.delay.hide);
+	            return;
+	        }
+        }
+        oldHide.call(this, arguments);
+    };
+
+})(jQuery);jQuery(document).ready(function(){
+	jQuery(".cal_div_weekrow").each(
+	function(idx, el){
+		var rowheight = jQuery(el).height();
+		jQuery(el).find('div.cal_div_weeklink > span').each (
+			function (is, subel){
+				jQuery(subel).css("height", rowheight+"px");
+				jQuery(subel).css("line-height", rowheight+"px");
+			}
+		);
+		jQuery(el).find('div.cal_div_daysoutofmonth > span').each (
+			function (is, subel){
+				jQuery(subel).css("height", rowheight+"px");
+				jQuery(subel).css("line-height", rowheight+"px");
+			}
+		);
+		jQuery(el).find('div.cal_div_daysnoevents > span').each (
+			function (is, subel){
+				jQuery(subel).css("height", rowheight+"px");
+			}
+		);
+		jQuery(el).find('div.cal_div_today> span').each (
+			function (is, subel){
+				jQuery(subel).css("height", rowheight+"px");
+			}
+		);
+		jQuery(el).find('div.cal_div_dayshasevents > span').each (
+			function (is,subel){
+				jQuery(subel).css("height", rowheight+"px");
+			}
+		);
+
+	});
+
+});
+	</script>
+	<link rel="stylesheet" href="/plugins/system/videobox/css/videobox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/libraries/videobox/css/videobox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/libraries/videobox/css/functions.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="/libraries/videobox/js/jquery.min.js"></script><script type="text/javascript">jQuery.noConflict();</script>
+	<script type="text/javascript" src="/libraries/videobox/js/videobox.js"></script>
+	<script type="text/javascript" src="/libraries/videobox/js/functions.js"></script>
+
+    <link rel="stylesheet" href="/templates/system/css/system.css" />
+    <link rel="stylesheet" href="/templates/system/css/general.css" />
+
+    <!-- Created by Artisteer v4.1.0.60046 -->
+    
+    
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="/templates/new_shablon_osnov_5_16_norm/css/template.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="/templates/new_shablon_osnov_5_16_norm/css/template.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="/templates/new_shablon_osnov_5_16_norm/css/template.responsive.css" media="all">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script>if ('undefined' != typeof jQuery) document._artxJQueryBackup = jQuery;</script>
+    <script src="/templates/new_shablon_osnov_5_16_norm/jquery.js"></script>
+    <script>jQuery.noConflict();</script>
+
+    <script src="/templates/new_shablon_osnov_5_16_norm/script.js"></script>
+        <script>if (document._artxJQueryBackup) jQuery = document._artxJQueryBackup;</script>
+    <script src="/templates/new_shablon_osnov_5_16_norm/script.responsive.js"></script>
+</head>
+<body>
+
+<div id="art-main">
+    <div class="art-sheet clearfix">
+<header class="art-header"><!-- begin nostyle -->
+<div class="art-nostyle">
+<!-- begin nostyle content -->
+
+
+<div class="custom"  >
+	<p>  <a href="https://www.miacso.ru/"><img src="/Documents/Image_for_site/shapka_Blohina_4.png" alt="" width="230" height="213" /></a>  </p></div>
+<!-- end nostyle content -->
+</div>
+<!-- end nostyle -->
+
+    <div class="art-shapes">
+        
+            </div>
+<div class="art-slider art-slidecontainerheader" data-width="1726" data-height="150">
+    <div class="art-slider-inner">
+<a class="art-slide-item art-slideheader0" href="http://www.miacso.ru/">
+<div class="art-slideheader0-object1951404343" data-left="1.33%"></div>
+<div class="art-slideheader0-object184015936" data-left="100%"></div>
+<div class="art-slideheader0-object1428387586" data-left="48.94%"></div>
+<div class="art-slideheader0-object1423425455" data-left="0.63%"></div>
+<div class="art-slideheader0-object289796617" data-left="0%"></div>
+<div class="art-slideheader0-object1064946286" data-left="0.58%"></div>
+<div class="art-slideheader0-object1823474436" data-left="48.52%"></div>
+
+</a>
+<a class="art-slide-item art-slideheader1" href="http://www.miacso.ru/">
+<div class="art-slideheader1-object845701148" data-left="1.33%"></div>
+<div class="art-slideheader1-object549199709" data-left="100%"></div>
+<div class="art-slideheader1-object2062856516" data-left="48.94%"></div>
+<div class="art-slideheader1-object870498880" data-left="0.63%"></div>
+<div class="art-slideheader1-object385072397" data-left="0%"></div>
+<div class="art-slideheader1-object165161509" data-left="0.58%"></div>
+<div class="art-slideheader1-object1855756499" data-left="48.1%"></div>
+
+</a>
+<a class="art-slide-item art-slideheader2" href="http://www.miacso.ru/">
+<div class="art-slideheader2-object1212057059" data-left="1.33%"></div>
+<div class="art-slideheader2-object928034558" data-left="100%"></div>
+<div class="art-slideheader2-object598055532" data-left="48.94%"></div>
+<div class="art-slideheader2-object196924336" data-left="0.63%"></div>
+<div class="art-slideheader2-object1154546747" data-left="0%"></div>
+<div class="art-slideheader2-object1653431551" data-left="0.58%"></div>
+<div class="art-slideheader2-object1958583893" data-left="47.78%"></div>
+
+</a>
+<a class="art-slide-item art-slideheader3" href="http://www.miacso.ru/">
+<div class="art-slideheader3-object190645263" data-left="1.33%"></div>
+<div class="art-slideheader3-object1645074189" data-left="100%"></div>
+<div class="art-slideheader3-object849309541" data-left="48.94%"></div>
+<div class="art-slideheader3-object591717552" data-left="0.63%"></div>
+<div class="art-slideheader3-object588989639" data-left="0%"></div>
+<div class="art-slideheader3-object1112046963" data-left="0.58%"></div>
+<div class="art-slideheader3-object501350382" data-left="47.57%"></div>
+
+</a>
+
+    </div>
+</div>
+<div class="art-slidenavigator art-slidenavigatorheader" data-left="46.38">
+<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
+</div>
+
+
+
+
+
+
+<div class="art-textblock art-object227400126" data-left="98.49%">
+    <form class="art-search" name="Search" action="/index.php" method="post">
+    <input type="text" value="" name="searchword">
+    <input type="hidden" name="task" value="search">
+<input type="hidden" name="option" value="com_search">
+<input type="submit" value="Search" name="search" class="art-search-button">
+</form>
+</div>
+                
+                    
+</header>
+<nav class="art-nav">
+    
+<ul class="art-hmenu"><li class="item-101 active deeper parent"><a class=" active" href="/home">        О центре</a><ul><li class="item-195"><a href="/home/tseli-i-zadachi">Цели и задачи</a></li><li class="item-197"><a href="/home/strukturnye-podrazdeleniya">Структура</a></li><li class="item-146"><a href="/home/kontakty">Контакты</a></li><li class="item-199"><a href="/home/vakansii">Вакансии</a></li><li class="item-380"><a href="/home/obshchie-svedeniya">Общие сведения</a></li><li class="item-553"><a href="/home/zakupki">Закупки</a></li></ul></li><li class="item-139 deeper parent"><a href="/novosti">Новости</a><ul><li class="item-317"><a href="/novosti/video-novosti">Видео-новости</a></li></ul></li><li class="item-140 deeper parent"><a href="/dokument">Документы</a><ul><li class="item-190"><a href="/dokument/informatizatsiya">Информатизация </a></li><li class="item-237"><a href="/dokument/nezavisimaya-antikorruptsionnaya-ekspertiza">Антикоррупционная деятельность</a></li><li class="item-292 deeper parent"><a href="/dokument/poleznaya-informatsiya">Полезная информация</a><ul><li class="item-291"><a href="/dokument/poleznaya-informatsiya/pamyatka">Памятка по обезболиванию</a></li><li class="item-340"><a href="/dokument/poleznaya-informatsiya/ostorozhno-gripp">Осторожно ГРИПП</a></li><li class="item-406"><a href="/dokument/poleznaya-informatsiya/gosudarstvennye-uslugi">Государственные услуги</a></li><li class="item-434"><a href="/dokument/poleznaya-informatsiya/perechni-aktualnykh-mo">Перечень МО, подведомственных Минздраву СО</a></li></ul></li><li class="item-303 deeper parent"><a href="/dokument/tekushchie-monitoringi">Текущие мониторинги</a><ul><li class="item-286"><a href="/dokument/tekushchie-monitoringi/monitoring-snizheniya-smertnosti">Мониторинг снижения смертности</a></li><li class="item-377"><a href="/dokument/tekushchie-monitoringi/ipra">ИПРА</a></li><li class="item-423"><a href="/dokument/tekushchie-monitoringi/formy-po-fpm">Формы по ФПМ</a></li></ul></li><li class="item-304"><a href="/dokument/kliniko-statisticheskie-gruppy-2015">Клинико-статистические группы</a></li></ul></li><li class="item-141 deeper parent"><a href="/materialy">Материалы по направлениям</a><ul><li class="item-156 deeper parent"><a href="/materialy/meditsinskaya-statistika">Медицинская статистика</a><ul><li class="item-157"><a href="/materialy/meditsinskaya-statistika/statisticheskie-otchetnye-formy">Статистические отчетные формы</a></li><li class="item-166"><a href="/materialy/meditsinskaya-statistika/po-medstat">ПО «Медстат» </a></li></ul></li><li class="item-163 deeper parent"><a href="/materialy/programmnoe-obespechenie">Программное обеспечение</a><ul><li class="item-207 deeper parent"><a href="/materialy/programmnoe-obespechenie/federalnye-registry">Федеральные регистры</a><ul><li class="item-385"><a href="/materialy/programmnoe-obespechenie/federalnye-registry/federalnyj-reestr-meditsinskikh-organizatsij">Федеральный реестр медицинских организаций</a></li><li class="item-214"><a href="/materialy/programmnoe-obespechenie/federalnye-registry/federalnyj-registr-meditsinskikh-rabotnikov">Федеральный регистр медицинских работников </a></li><li class="item-218"><a href="/materialy/programmnoe-obespechenie/federalnye-registry/orfannye-zabolevaniya">Орфанные заболевания </a></li><li class="item-219"><a href="/materialy/programmnoe-obespechenie/federalnye-registry/7-nozologij">14 нозологий </a></li></ul></li><li class="item-209 deeper parent"><a href="/materialy/programmnoe-obespechenie/prochee-po">Прочее ПО</a><ul><li class="item-229"><a href="/materialy/programmnoe-obespechenie/prochee-po/programmnyj-kompleks-tsentr-zdorovya">Программный комплекс «Центр Здоровья»</a></li><li class="item-235"><a href="/materialy/programmnoe-obespechenie/prochee-po/vmp-smp-sankur">ВМП, САНКУР </a></li></ul></li></ul></li><li class="item-475"><a href="/materialy/etskz">ЕЦКЗ</a></li></ul></li><li class="item-142 deeper parent"><a href="/telemed">Телемедицина</a><ul><li class="item-179 deeper parent"><a href="/telemed/spravochnaya-informatsiya">Справочная информация </a><ul><li class="item-245"><a href="/telemed/spravochnaya-informatsiya/adresnaya-kniga-telemeditsinskikh-punktov-sverdlovskoj-oblasti">Адресная книга точек подключения к Единой телемедицинской сети ЗСО</a></li><li class="item-249"><a href="/telemed/spravochnaya-informatsiya/konfiguratsiya-tsentralizovannogo-yadra-edinoj-telemeditsinskoj-seti-so">Конфигурация централизованного ядра единой телемедицинской сети СО</a></li></ul></li><li class="item-180"><a href="/telemed/instruktsii">Инструкции </a></li></ul></li><li class="item-244 current"><a href="/raspisanie-vks/month.calendar/2026/10/07/-">Видеоконференция</a></li><li class="item-144 deeper parent"><a href="/voprosy">Вопросы-ответы</a><ul><li class="item-183"><a href="/voprosy/formirovanie-reestrov">Формирование реестров </a></li></ul></li><li class="item-400 deeper parent"><a href="/informatsionnye-sistemy">Информационные системы</a><ul><li class="item-221"><a href="/informatsionnye-sistemy/monitoring-deyatelnosti-meditsinskikh-uchrezhdenij-medved">МДМУ</a></li><li class="item-402"><a href="/informatsionnye-sistemy/mis-mo">МИС МО</a></li><li class="item-403"><a href="/informatsionnye-sistemy/fss">Электронный лист нетрудоспособности</a></li><li class="item-213"><a href="/informatsionnye-sistemy/avtomatizirovannaya-sistema-asulon-m-apteka-plyus-lpu">Асулон М- Аптека плюс ЛПУ</a></li><li class="item-222"><a href="/informatsionnye-sistemy/as-monitoring-beremennykh">АИС &quot;Региональный акушерский мониторинг&quot;</a></li><li class="item-548"><a href="/informatsionnye-sistemy/graficheskij-interfejs-federalnogo-reestra-meditsinskikh-dokumentov-o-rozhdenii-egisz">Графический интерфейс ФРСМР ЕГИСЗ</a></li><li class="item-230"><a href="/informatsionnye-sistemy/as-detskoe-pitanie">АС «Детское питание»</a></li><li class="item-405"><a href="/informatsionnye-sistemy/onkor">ОНКОР</a></li><li class="item-442"><a href="/informatsionnye-sistemy/geoinformatsionnaya-sistema">Геоинформационная система</a></li><li class="item-445"><a href="/informatsionnye-sistemy/elektronnye-napravleniya">Электронные направления</a></li><li class="item-476"><a href="/informatsionnye-sistemy/tsentralnaya-laboratornaya-informatsionnaya-sistema">Централизованная лабораторная информационная система</a></li><li class="item-543"><a href="/informatsionnye-sistemy/tsentralnyj-arkhiv-meditsinskikh-izobrazhenij">Центральный архив медицинских изображений</a></li><li class="item-535"><a href="/informatsionnye-sistemy/servis-arkhiv-meditsinskikh-dokumentov">Сервис &quot;Архив медицинских документов&quot; </a></li><li class="item-210"><a href="/informatsionnye-sistemy/edinaya-meditsinskaya-informatsionnaya-sistema-emis">Региональная медицинская информационная система (РМИС) </a></li><li class="item-538"><a href="/informatsionnye-sistemy/edinaya-baza-dannykh-covid-19">Единая база данных COVID-19</a></li><li class="item-540"><a href="/informatsionnye-sistemy/is-ekstrennye-izveshcheniya">ИС «Экстренные извещения»</a></li><li class="item-542"><a href="/informatsionnye-sistemy/reanimatsionnyj-monitoring">Реанимационный мониторинг</a></li><li class="item-384"><a href="/informatsionnye-sistemy/is-tanatos">ИС ТАНАТОС</a></li></ul></li><li class="item-425 deeper parent"><a href="/egisso">ЕГИССО</a><ul><li class="item-427"><a href="/egisso/normativno-spravochnaya-informatsiya">Нормативно-справочная информация</a></li><li class="item-428"><a href="/egisso/otchetnost-po-egisso">Отчетность по ЕГИССО</a></li></ul></li><li class="item-448 deeper parent"><a href="/sed-pso">СЭД ПСО</a><ul><li class="item-449"><a href="/sed-pso/o-sisteme">О системе</a></li><li class="item-450"><a href="/sed-pso/o-podklyuchenii-k-sisteme">О подключении к системе</a></li><li class="item-451"><a href="/sed-pso/spravka">Справка</a></li><li class="item-452"><a href="/sed-pso/dokumentatsiya">Документация</a></li></ul></li><li class="item-206"><a href="/rf-egisz-sverdlovskoj-oblasti">РФ ЕГИСЗ Свердловской области</a></li><li class="item-479"><a href="/reestr-sertifikatov">Реестр сертификатов</a></li><li class="item-537"><a href="/otsenka-osvedomlennosti-grazhdan-o-np">Оценка осведомленности граждан о НП</a></li><li class="item-544"><a href="/vzaimodejstvie-s-so-nko-i-volonterskimi-organizatsiyami">Взаимодействие с СО НКО и волонтерскими организациями</a></li><li class="item-547"><a href="/tekhnicheskaya-podderzhka-mis">Техническая поддержка МИС </a></li></ul> 
+    </nav>
+<!-- begin nostyle -->
+<div class="art-nostyle">
+<!-- begin nostyle content -->
+
+<div class="breadcrumbs">
+<a href="/" class="pathway">Главная</a> &gt; <span>Видеоконференция</span></div>
+<!-- end nostyle content -->
+</div>
+<!-- end nostyle -->
+<div class="art-content-layout"><div class="art-content-layout-row"><div class="art-layout-cell art-layout-sidebar-bg" style="width: 100%;"><div class="art-block clearfix"><div class="art-blockheader"><h3 class="t">!!!</h3></div><div class="art-blockcontent"><div class="custom"  >
+	<p style="text-align: center;"> <span style="color: #800000; font-size: 12pt;"><strong>Уважаемые коллеги и посетители сайта!</strong></span></p>
+<p style="text-align: center;"> </p>
+<p style="text-align: center;"><span style="color: #800000; font-size: 12pt;"><strong>Официальный сайт</strong></span></p>
+<p style="text-align: center;"><span style="color: #800000; font-size: 12pt;"><strong> ГАУЗ СО "Медицинский информационно-аналитический центр"</strong></span></p>
+<p style="text-align: center;"><span style="color: #800000; font-size: 12pt;"><strong> находится в стадии актуализации и наполнения информацией в связи с реорганизацией учреждения.</strong></span></p>
+<p style="text-align: center;"> </p>
+<p style="text-align: center;"><span style="color: #800000; font-size: 12pt;"><strong>Приносим извинения за доставленные неудобства!</strong><strong> </strong></span></p>
+<p style="text-align: center;"> </p></div></div></div></div></div></div><div class="art-layout-wrapper">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content">
+<article class="art-post art-messages"><div class="art-postcontent clearfix"><div id="system-message-container">
+	</div>
+</div></article><article class="art-post"><div class="art-postcontent clearfix"><!-- Event Calendar and Lists Powered by JEvents //-->
+	<div id="jevents">
+<div class="contentpaneopen jeventpage  jevbootstrap" id="jevents_header">
+		
+			<h2 class="contentheading" >Календарь событий</h2>
+		</div>
+<div class="contentpaneopen  jeventpage  jevbootstrap" id="jevents_body">
+<div class='jev_pretoolbar'></div>		<div class="ev_navigation">
+			<table class="ev_navtable" align="center">
+				<tr align="center">
+					<td align="right" class="h1 vtop">
+						<a href="/raspisanie-vks/day.listevents/2026/10/07/-" title="Посмотреть сегодняшние">Посмотреть сегодняшние</a>
+					</td>
+					<td align="center" class="h1 vbotom">
+						<form name="ViewSelect" action="https://miacso.ru/index.php" method="get">
+							<input type="hidden" name="Itemid" value="244" />
+							<input type="hidden" name="option" value="com_jevents" />
+							<input type="hidden" name="year" value="2022" />
+							<input type="hidden" name="month" value="02" />
+							<input type="hidden" name="day" value="17" />
+                                                        <select name="task" id="task" onchange="submit(this.form);">
+																	<option value="day.listevents" >Просмотр по дням</option>
+																		<option value="week.listevents">События на неделю</option>
+																		<option value="month.calendar"selected>Просмотр по месяцам</option>
+																		<option value="year.listevents">События на год</option>
+																		<option value="search.form">Поиск</option>
+																</select>
+						</form>
+					</td>
+					<td align="left" class="w100 vtop h1">
+						<a href="/raspisanie-vks/month.calendar/2026/10/07/-" title="Наступающие события месяца">
+							Наступающие события месяца						</a>
+					</td>
+				</tr>
+			</table>
+			<table align="center" class="t300 b0">
+				<tr valign="top">
+								<td class="w10px vmiddle" align="center"><a href="/raspisanie-vks/month.calendar/2021/02/17/-" title="Предыдущий год"><img border='0' src='https://miacso.ru/components/com_jevents/views/default/assets/images/gg_yellow.gif' alt='Предыдущий год'/></a>
+</td>
+						<td class="w10px vmiddle" align="center"><a href="/raspisanie-vks/month.calendar/2022/01/17/-" title="Предыдущий месяц"><img border='0' src='https://miacso.ru/components/com_jevents/views/default/assets/images/g_yellow.gif' alt='Предыдущий месяц'/></a>
+</td>
+								<td align="center" class="vtop">
+						<form name="BarNav" action="https://miacso.ru/index.php" method="get">
+							<input type="hidden" name="option" value="com_jevents" />
+							<input type="hidden" name="task" value="month.calendar" />
+							<select id="day" name="day"  style="font-size:10px;" onchange="submit(this.form)">
+	<option value="01">01</option>
+	<option value="02">02</option>
+	<option value="03">03</option>
+	<option value="04">04</option>
+	<option value="05">05</option>
+	<option value="06">06</option>
+	<option value="07">07</option>
+	<option value="08">08</option>
+	<option value="09">09</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17" selected="selected">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+</select>
+<select id="month" name="month" style="font-size:10px;" onchange="submit(this.form)">
+	<option value="01">Январь</option>
+	<option value="02" selected="selected">Февраль</option>
+	<option value="03">Март</option>
+	<option value="04">Апрель</option>
+	<option value="05">Май</option>
+	<option value="06">Июнь</option>
+	<option value="07">Июль</option>
+	<option value="08">Август</option>
+	<option value="09">Сентябрь</option>
+	<option value="10">Октябрь</option>
+	<option value="11">Ноябрь</option>
+	<option value="12">Декабрь</option>
+</select>
+<select id="year" name="year" style="font-size:10px;" onchange="submit(this.form)">
+	<option value="2022" selected="selected">2022</option>
+	<option value="2024">2024</option>
+	<option value="2025">2025</option>
+	<option value="2026">2026</option>
+	<option value="2027">2027</option>
+</select>
+							<input type="hidden" name="Itemid" value="244" />
+						</form>
+					</td>
+								<td class="w10px vmiddle" align="center"><a href="/raspisanie-vks/month.calendar/2022/03/17/-" title="Следующий месяц"><img border='0' src='https://miacso.ru/components/com_jevents/views/default/assets/images/d_yellow.gif' alt='Следующий месяц'/></a>
+</td>
+						<td class="w10px vmiddle" align="center"><a href="/raspisanie-vks/month.calendar/2023/02/17/-" title="Следующий год"><img border='0' src='https://miacso.ru/components/com_jevents/views/default/assets/images/dd_yellow.gif' alt='Следующий год'/></a>
+</td>
+							</tr>
+			</table>
+
+		</div>
+		
+<div class="cal_div">
+	<div class="topleft" ><span></span>
+	</div>
+	<div  class="cal_div_month cal_div_month_prev">
+		<span>
+			<a href='/raspisanie-vks/month.calendar/2022/01/07/-' title='Январь' style='text-decoration:none;'>Январь</a>
+		</span>
+	</div>
+	<div  class="cal_div_currentmonth">
+		<span>
+			Февраль 2022		</span>
+	</div>
+	<div class="cal_div_month  cal_div_month_next">
+		<span>
+			<a href='/raspisanie-vks/month.calendar/2022/03/07/-' title='Март' style='text-decoration:none;'>Март</a>
+		</span>
+	</div>
+			<div class="cal_div_daynames cal_div_daynames0" >
+			<span>
+				Понедельник			</span>
+		</div>
+				<div class="cal_div_daynames cal_div_daynames1" >
+			<span>
+				Вторник			</span>
+		</div>
+				<div class="cal_div_daynames cal_div_daynames2" >
+			<span>
+				Среда			</span>
+		</div>
+				<div class="cal_div_daynames cal_div_daynames3" >
+			<span>
+				Четверг			</span>
+		</div>
+				<div class="cal_div_daynames cal_div_daynames4" >
+			<span>
+				Пятница			</span>
+		</div>
+				<div class="cal_div_daynames cal_div_daynames5" >
+			<span>
+				<span class="saturday">Суббота</span>			</span>
+		</div>
+				<div class="cal_div_daynames cal_div_daynames6" >
+			<span>
+				<span class="sunday">Воскресенье</span>			</span>
+		</div>
+				<div class="cal_div_weekrow" >
+			<div class='cal_div_weeklink'>
+				<span>
+					<a href='/raspisanie-vks/week.listevents/2022/1/31/-'>5</a></td>
+				</span>
+			</div>
+									<div class="cal_div_daysoutofmonth  cal_div_day0" >
+							<span>
+								Январь							</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day1">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/01/-" title="Перейти к календарю – текущий день">1</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельный отчет службы родовспоможения.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Вторник, 1. Февраль 2022&lt;br /&gt;09:00 - 10:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/01/20803/-/ezhenedelnyj-otchet-sluzhby-rodovspomozheniya&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/01/20803/-/ezhenedelnyj-otchet-sluzhby-rodovspomozheniya" >09:00 Еженедельный от ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day2">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/02/-" title="Перейти к календарю – текущий день">2</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Областная комиссия по разбору случаев перинатальной смертности.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 2. Февраль 2022&lt;br /&gt;08:30 - 10:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/02/20900/-/oblastnaya-komissiya-po-razboru-sluchaev-perinatalnoj-smertnosti&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/02/20900/-/oblastnaya-komissiya-po-razboru-sluchaev-perinatalnoj-smertnosti" >08:30 Областная комис ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Заседание рабочей группы Министерства здравоохранения Свердловской области по контролю за соблюдением сроков рассмотрения поступающих обращений и сообщений граждан.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 2. Февраль 2022&lt;br /&gt;10:00 - 11:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/02/21443/-/zasedanie-rabochej-gruppy-ministerstva-zdravookhraneniya-sverdlovskoj-oblasti-po-kontrolyu-za-soblyudeniem-srokov-rassmotreniya-postupayushchikh-obras&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/02/21443/-/zasedanie-rabochej-gruppy-ministerstva-zdravookhraneniya-sverdlovskoj-oblasti-po-kontrolyu-za-soblyudeniem-srokov-rassmotreniya-postupayushchikh-obras" >10:00 Заседание рабоч ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Областной акушерский консилиум.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 2. Февраль 2022&lt;br /&gt;10:00 - 11:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/02/13919/-/oblastnoj-akusherskij-konsilium&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/02/13919/-/oblastnoj-akusherskij-konsilium" >10:00 Областной акуше ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 2. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/02/21182/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/02/21182/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day3">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/03/-" title="Перейти к календарю – текущий день">3</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Еженедельная видеоконференция ММЦ ГАУЗ СО &quot;Городская больница город Асбест&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 3. Февраль 2022&lt;br /&gt;10:00 - 10:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/03/13101/-/vks-otmenena-organizatorom-ezhenedelnaya-videokonferentsiya-mmts-gauz-so-gorodskaya-bolnitsa-gorod-asbest-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/03/13101/-/vks-otmenena-organizatorom-ezhenedelnaya-videokonferentsiya-mmts-gauz-so-gorodskaya-bolnitsa-gorod-asbest-s-prikreplennymi-territoriyami" >10:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное совещание ММЦ ГАУЗ СО &quot;Городская больница № 4 город Нижний Тагил&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 3. Февраль 2022&lt;br /&gt;10:00 - 10:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/03/14975/-/ezhenedelnoe-soveshchanie-mmts-gauz-so-gorodskaya-bolnitsa-4-gorod-nizhnij-tagil-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/03/14975/-/ezhenedelnoe-soveshchanie-mmts-gauz-so-gorodskaya-bolnitsa-4-gorod-nizhnij-tagil-s-prikreplennymi-territoriyami" >10:00 Еженедельное со ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с КАОП  Свердловской области.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 3. Февраль 2022&lt;br /&gt;13:00 - 14:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/03/20972/-/soveshchanie-s-kaop-sverdlovskoj-oblasti&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/03/20972/-/soveshchanie-s-kaop-sverdlovskoj-oblasti" >13:00 Совещание с КАО ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Видеоселекторное совещание по актуальным вопросам службы детства и родовспоможения под руководством Заместителя Министра здравоохранения Свердловской области Чадовой Е.А&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 3. Февраль 2022&lt;br /&gt;14:30 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/03/13807/-/vks-otmenena-organizatorom-videoselektornoe-soveshchanie-po-aktualnym-voprosam-sluzhby-detstva-i-rodovspomozheniya-pod-rukovodstvom-zamestitelya-minis&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/03/13807/-/vks-otmenena-organizatorom-videoselektornoe-soveshchanie-po-aktualnym-voprosam-sluzhby-detstva-i-rodovspomozheniya-pod-rukovodstvom-zamestitelya-minis" >14:30 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day4">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/04/-" title="Перейти к календарю – текущий день">4</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное селекторное совещание Регионального сосудистого центра с ПСО&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 4. Февраль 2022&lt;br /&gt;09:30 - 10:45&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/04/12281/-/ezhenedelnoe-selektornoe-soveshchanie-regionalnogo-sosudistogo-tsentra-s-pso&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/04/12281/-/ezhenedelnoe-selektornoe-soveshchanie-regionalnogo-sosudistogo-tsentra-s-pso" >09:30 Еженедельное се ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Отчет МКПД &lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 4. Февраль 2022&lt;br /&gt;12:00 - 13:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/04/21442/-/vks-otmenena-organizatorom-otchet-mkpd&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/04/21442/-/vks-otmenena-organizatorom-otchet-mkpd" >12:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное видеоселекторное совещание онкослужбы&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 4. Февраль 2022&lt;br /&gt;12:00 - 12:20&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/04/21543/-/ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/04/21543/-/ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby" >12:00 Еженедельное ви ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 4. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/04/21183/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/04/21183/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС перенесена на 12:00!)Еженедельное видеоселекторное совещание онкослужбы&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 4. Февраль 2022&lt;br /&gt;15:40 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/04/21073/-/vks-perenesena-na-12-00-ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/04/21073/-/vks-perenesena-na-12-00-ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby" >15:40 (ВКС перенесена ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day5">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/05/-" title="Перейти к календарю – текущий день">5</a>
+															</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day6">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/06/-" title="Перейти к календарю – текущий день">6</a>
+															</span>
+						</div>
+									<div class="divclear"></div>
+		</div>
+				<div class="cal_div_weekrow" >
+			<div class='cal_div_weeklink'>
+				<span>
+					<a href='/raspisanie-vks/week.listevents/2022/02/7/-'>6</a></td>
+				</span>
+			</div>
+									<div class="cal_div_daysnoevents cal_div_day0">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/07/-" title="Перейти к календарю – текущий день">7</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное совещание ММЦ ВУО ГАУЗ СО “Ирбитская ЦГБ” г. Ирбит с прикрепленными территориями&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 7. Февраль 2022&lt;br /&gt;09:00 - 10:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/07/12847/-/ezhenedelnoe-soveshchanie-mmts-vuo-gauz-so-irbitskaya-tsgb-g-irbit-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/07/12847/-/ezhenedelnoe-soveshchanie-mmts-vuo-gauz-so-irbitskaya-tsgb-g-irbit-s-prikreplennymi-territoriyami" >09:00 Еженедельное со ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена!)Видеоконференция по вопросу исполнения национальных проектов Министерства здравоохранения Российской Федерации «Здравоохранение и «Демография»...&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 7. Февраль 2022&lt;br /&gt;10:00 - 11:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/07/17716/-/vks-otmenena-videokonferentsiya-po-voprosu-ispolneniya-natsionalnykh-proektov-ministerstva-zdravookhraneniya-rossijskoj-federatsii-zdravookhranenie-i-&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/07/17716/-/vks-otmenena-videokonferentsiya-po-voprosu-ispolneniya-natsionalnykh-proektov-ministerstva-zdravookhraneniya-rossijskoj-federatsii-zdravookhranenie-i-" >10:00 (ВКС отменена!) ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Еженедельное видеоселекторное совещание по ОКС.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 7. Февраль 2022&lt;br /&gt;12:00 - 13:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/07/18899/-/vks-otmenena-organizatorom-ezhenedelnoe-videoselektornoe-soveshchanie-po-oks&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/07/18899/-/vks-otmenena-organizatorom-ezhenedelnoe-videoselektornoe-soveshchanie-po-oks" >12:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 7. Февраль 2022&lt;br /&gt;13:00 - 14:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/07/21544/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/07/21544/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >13:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС перенесена на 13:00!)Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 7. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/07/21184/-/vks-perenesena-na-13-00-soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/07/21184/-/vks-perenesena-na-13-00-soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 (ВКС перенесена ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросу внесения сведений о лабораторном тестировании на ЕПГУ&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 7. Февраль 2022&lt;br /&gt;16:00 - 17:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/07/21545/-/soveshchanie-s-glavnymi-vrachami-po-voprosu-vneseniya-svedenij-o-laboratornom-testirovanii-na-epgu&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/07/21545/-/soveshchanie-s-glavnymi-vrachami-po-voprosu-vneseniya-svedenij-o-laboratornom-testirovanii-na-epgu" >16:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day1">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/08/-" title="Перейти к календарю – текущий день">8</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельный отчет службы родовспоможения.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Вторник, 8. Февраль 2022&lt;br /&gt;09:00 - 10:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/08/20804/-/ezhenedelnyj-otchet-sluzhby-rodovspomozheniya&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/08/20804/-/ezhenedelnyj-otchet-sluzhby-rodovspomozheniya" >09:00 Еженедельный от ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day2">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/09/-" title="Перейти к календарю – текущий день">9</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Областная комиссия по разбору случаев перинатальной смертности.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 9. Февраль 2022&lt;br /&gt;08:30 - 10:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/09/20901/-/oblastnaya-komissiya-po-razboru-sluchaev-perinatalnoj-smertnosti&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/09/20901/-/oblastnaya-komissiya-po-razboru-sluchaev-perinatalnoj-smertnosti" >08:30 Областная комис ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Областной акушерский консилиум.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 9. Февраль 2022&lt;br /&gt;10:00 - 11:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/09/13920/-/oblastnoj-akusherskij-konsilium&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/09/13920/-/oblastnoj-akusherskij-konsilium" >10:00 Областной акуше ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 9. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/09/21185/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/09/21185/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day3">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/10/-" title="Перейти к календарю – текущий день">10</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельная видеоконференция ММЦ ГАУЗ СО &quot;Городская больница город Асбест&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 10. Февраль 2022&lt;br /&gt;10:00 - 10:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/10/13102/-/ezhenedelnaya-videokonferentsiya-mmts-gauz-so-gorodskaya-bolnitsa-gorod-asbest-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/10/13102/-/ezhenedelnaya-videokonferentsiya-mmts-gauz-so-gorodskaya-bolnitsa-gorod-asbest-s-prikreplennymi-territoriyami" >10:00 Еженедельная ви ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное совещание ММЦ ГАУЗ СО &quot;Городская больница № 4 город Нижний Тагил&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 10. Февраль 2022&lt;br /&gt;10:00 - 10:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/10/14976/-/ezhenedelnoe-soveshchanie-mmts-gauz-so-gorodskaya-bolnitsa-4-gorod-nizhnij-tagil-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/10/14976/-/ezhenedelnoe-soveshchanie-mmts-gauz-so-gorodskaya-bolnitsa-4-gorod-nizhnij-tagil-s-prikreplennymi-territoriyami" >10:00 Еженедельное со ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с КАОП  Свердловской области.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 10. Февраль 2022&lt;br /&gt;13:00 - 14:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/10/20973/-/soveshchanie-s-kaop-sverdlovskoj-oblasti&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/10/20973/-/soveshchanie-s-kaop-sverdlovskoj-oblasti" >13:00 Совещание с КАО ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Видеоселекторное совещание по актуальным вопросам службы детства и родовспоможения под руководством Заместителя Министра здравоохранения Свердловской области Чадовой Е.А&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 10. Февраль 2022&lt;br /&gt;14:30 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/10/13808/-/vks-otmenena-organizatorom-videoselektornoe-soveshchanie-po-aktualnym-voprosam-sluzhby-detstva-i-rodovspomozheniya-pod-rukovodstvom-zamestitelya-minis&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/10/13808/-/vks-otmenena-organizatorom-videoselektornoe-soveshchanie-po-aktualnym-voprosam-sluzhby-detstva-i-rodovspomozheniya-pod-rukovodstvom-zamestitelya-minis" >14:30 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day4">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/11/-" title="Перейти к календарю – текущий день">11</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное селекторное совещание Регионального сосудистого центра с ПСО&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 11. Февраль 2022&lt;br /&gt;09:30 - 10:45&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/11/12282/-/ezhenedelnoe-selektornoe-soveshchanie-regionalnogo-sosudistogo-tsentra-s-pso&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/11/12282/-/ezhenedelnoe-selektornoe-soveshchanie-regionalnogo-sosudistogo-tsentra-s-pso" >09:30 Еженедельное се ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное видеоселекторное совещание онкослужбы&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 11. Февраль 2022&lt;br /&gt;12:00 - 12:20&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/11/21546/-/ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/11/21546/-/ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby" >12:00 Еженедельное ви ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 11. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/11/21186/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/11/21186/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС перенесена на 12:00!)Еженедельное видеоселекторное совещание онкослужбы&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 11. Февраль 2022&lt;br /&gt;15:40 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/11/21074/-/vks-perenesena-na-12-00-ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/11/21074/-/vks-perenesena-na-12-00-ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby" >15:40 (ВКС перенесена ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросу вакцинации населения против новой коронавирусной инфекции COVID-19 &quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 11. Февраль 2022&lt;br /&gt;16:00 - 16:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/11/21547/-/soveshchanie-s-glavnymi-vrachami-po-voprosu-vaktsinatsii-naseleniya-protiv-novoj-koronavirusnoj-infektsii-covid-19&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/11/21547/-/soveshchanie-s-glavnymi-vrachami-po-voprosu-vaktsinatsii-naseleniya-protiv-novoj-koronavirusnoj-infektsii-covid-19" >16:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day5">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/12/-" title="Перейти к календарю – текущий день">12</a>
+															</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day6">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/13/-" title="Перейти к календарю – текущий день">13</a>
+															</span>
+						</div>
+									<div class="divclear"></div>
+		</div>
+				<div class="cal_div_weekrow" >
+			<div class='cal_div_weeklink'>
+				<span>
+					<a href='/raspisanie-vks/week.listevents/2022/02/14/-'>7</a></td>
+				</span>
+			</div>
+									<div class="cal_div_daysnoevents cal_div_day0">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/14/-" title="Перейти к календарю – текущий день">14</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное совещание ММЦ ВУО ГАУЗ СО “Ирбитская ЦГБ” г. Ирбит с прикрепленными территориями&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 14. Февраль 2022&lt;br /&gt;09:00 - 10:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/14/12848/-/ezhenedelnoe-soveshchanie-mmts-vuo-gauz-so-irbitskaya-tsgb-g-irbit-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/14/12848/-/ezhenedelnoe-soveshchanie-mmts-vuo-gauz-so-irbitskaya-tsgb-g-irbit-s-prikreplennymi-territoriyami" >09:00 Еженедельное со ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Видеоконференция по вопросу повышения качества и безопасности оказания медицинской помощи в медицинских организаций Свердловской области, оказывающих медицинскую помощь по профилю «акушерство и гинекология».&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 14. Февраль 2022&lt;br /&gt;10:00 - 11:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/14/21444/-/videokonferentsiya-po-voprosu-povysheniya-kachestva-i-bezopasnosti-okazaniya-meditsinskoj-pomoshchi-v-meditsinskikh-organizatsij-sverdlovskoj-oblasti-&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/14/21444/-/videokonferentsiya-po-voprosu-povysheniya-kachestva-i-bezopasnosti-okazaniya-meditsinskoj-pomoshchi-v-meditsinskikh-organizatsij-sverdlovskoj-oblasti-" >10:00 Видеоконференци ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Еженедельное видеоселекторное совещание по ОКС.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 14. Февраль 2022&lt;br /&gt;12:00 - 13:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/14/18900/-/vks-otmenena-organizatorom-ezhenedelnoe-videoselektornoe-soveshchanie-po-oks&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/14/18900/-/vks-otmenena-organizatorom-ezhenedelnoe-videoselektornoe-soveshchanie-po-oks" >12:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 14. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/14/21187/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/14/21187/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day1">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/15/-" title="Перейти к календарю – текущий день">15</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельный отчет службы родовспоможения.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Вторник, 15. Февраль 2022&lt;br /&gt;09:00 - 10:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/15/20805/-/ezhenedelnyj-otchet-sluzhby-rodovspomozheniya&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/15/20805/-/ezhenedelnyj-otchet-sluzhby-rodovspomozheniya" >09:00 Еженедельный от ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оформления листков нетрудоспособности&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Вторник, 15. Февраль 2022&lt;br /&gt;12:30 - 13:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/15/21548/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-oformleniya-listkov-netrudosposobnosti&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/15/21548/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-oformleniya-listkov-netrudosposobnosti" >12:30 Совещание с гла ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Семинар в режиме видеоконференцсвязи «Избранные вопросы организации профилактических медицинских осмотров, диспансеризации определенных групп взрослого населения и диспансерного наблюдения в 2022 году».&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Вторник, 15. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/15/21120/-/seminar-v-rezhime-videokonferentssvyazi-izbrannye-voprosy-organizatsii-profilakticheskikh-meditsinskikh-osmotrov-dispanserizatsii-opredelennykh-grupp-&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/15/21120/-/seminar-v-rezhime-videokonferentssvyazi-izbrannye-voprosy-organizatsii-profilakticheskikh-meditsinskikh-osmotrov-dispanserizatsii-opredelennykh-grupp-" >14:00 Семинар в режим ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day2">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/16/-" title="Перейти к календарю – текущий день">16</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Областная комиссия по разбору случаев перинатальной смертности.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 16. Февраль 2022&lt;br /&gt;08:30 - 10:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/16/20902/-/oblastnaya-komissiya-po-razboru-sluchaev-perinatalnoj-smertnosti&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/16/20902/-/oblastnaya-komissiya-po-razboru-sluchaev-perinatalnoj-smertnosti" >08:30 Областная комис ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Областной акушерский консилиум.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 16. Февраль 2022&lt;br /&gt;10:00 - 11:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/16/13921/-/oblastnoj-akusherskij-konsilium&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/16/13921/-/oblastnoj-akusherskij-konsilium" >10:00 Областной акуше ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Ежемесячное совещание &quot;По вопросам оказания паллиативной медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 16. Февраль 2022&lt;br /&gt;11:00 - 12:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/16/21147/-/ezhemesyachnoe-soveshchanie-po-voprosam-okazaniya-palliativnoj-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/16/21147/-/ezhemesyachnoe-soveshchanie-po-voprosam-okazaniya-palliativnoj-meditsinskoj-pomoshchi" >11:00 Ежемесячное сов ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 16. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/16/21188/-/vks-otmenena-organizatorom-soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/16/21188/-/vks-otmenena-organizatorom-soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day3">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/17/-" title="Перейти к календарю – текущий день">17</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Еженедельная видеоконференция ММЦ ГАУЗ СО &quot;Городская больница город Асбест&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 17. Февраль 2022&lt;br /&gt;10:00 - 10:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/17/13103/-/vks-otmenena-organizatorom-ezhenedelnaya-videokonferentsiya-mmts-gauz-so-gorodskaya-bolnitsa-gorod-asbest-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/17/13103/-/vks-otmenena-organizatorom-ezhenedelnaya-videokonferentsiya-mmts-gauz-so-gorodskaya-bolnitsa-gorod-asbest-s-prikreplennymi-territoriyami" >10:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное совещание ММЦ ГАУЗ СО &quot;Городская больница № 4 город Нижний Тагил&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 17. Февраль 2022&lt;br /&gt;10:00 - 10:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/17/14977/-/ezhenedelnoe-soveshchanie-mmts-gauz-so-gorodskaya-bolnitsa-4-gorod-nizhnij-tagil-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/17/14977/-/ezhenedelnoe-soveshchanie-mmts-gauz-so-gorodskaya-bolnitsa-4-gorod-nizhnij-tagil-s-prikreplennymi-territoriyami" >10:00 Еженедельное со ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с КАОП  Свердловской области.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 17. Февраль 2022&lt;br /&gt;13:00 - 14:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/17/20974/-/soveshchanie-s-kaop-sverdlovskoj-oblasti&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/17/20974/-/soveshchanie-s-kaop-sverdlovskoj-oblasti" >13:00 Совещание с КАО ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Видеоселекторное совещание по актуальным вопросам службы детства и родовспоможения под руководством Заместителя Министра здравоохранения Свердловской области Чадовой Е.А&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 17. Февраль 2022&lt;br /&gt;14:30 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/17/13809/-/vks-otmenena-organizatorom-videoselektornoe-soveshchanie-po-aktualnym-voprosam-sluzhby-detstva-i-rodovspomozheniya-pod-rukovodstvom-zamestitelya-minis&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/17/13809/-/vks-otmenena-organizatorom-videoselektornoe-soveshchanie-po-aktualnym-voprosam-sluzhby-detstva-i-rodovspomozheniya-pod-rukovodstvom-zamestitelya-minis" >14:30 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Заседание рабочей группы Минздрава Свердловской области по разработке и реализации проекта по выявлению генетически детерминированных заболеваний&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 17. Февраль 2022&lt;br /&gt;17:00 - 18:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/17/21648/-/zasedanie-rabochej-gruppy-minzdrava-sverdlovskoj-oblasti-po-razrabotke-i-realizatsii-proekta-po-vyyavleniyu-geneticheski-determinirovannykh-zabolevani&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/17/21648/-/zasedanie-rabochej-gruppy-minzdrava-sverdlovskoj-oblasti-po-razrabotke-i-realizatsii-proekta-po-vyyavleniyu-geneticheski-determinirovannykh-zabolevani" >17:00 Заседание рабоч ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day4">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/18/-" title="Перейти к календарю – текущий день">18</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное селекторное совещание Регионального сосудистого центра с ПСО&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 18. Февраль 2022&lt;br /&gt;09:30 - 10:45&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/18/12283/-/ezhenedelnoe-selektornoe-soveshchanie-regionalnogo-sosudistogo-tsentra-s-pso&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/18/12283/-/ezhenedelnoe-selektornoe-soveshchanie-regionalnogo-sosudistogo-tsentra-s-pso" >09:30 Еженедельное се ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное видеоселекторное совещание онкослужбы&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 18. Февраль 2022&lt;br /&gt;12:00 - 12:20&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/18/21649/-/ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/18/21649/-/ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby" >12:00 Еженедельное ви ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 18. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/18/21189/-/vks-otmenena-organizatorom-soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/18/21189/-/vks-otmenena-organizatorom-soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС перенесена на 12:00!)Еженедельное видеоселекторное совещание онкослужбы&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 18. Февраль 2022&lt;br /&gt;15:40 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/18/21075/-/vks-perenesena-na-12-00-ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/18/21075/-/vks-perenesena-na-12-00-ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby" >15:40 (ВКС перенесена ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day5">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/19/-" title="Перейти к календарю – текущий день">19</a>
+															</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day6">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/20/-" title="Перейти к календарю – текущий день">20</a>
+															</span>
+						</div>
+									<div class="divclear"></div>
+		</div>
+				<div class="cal_div_weekrow" >
+			<div class='cal_div_weeklink'>
+				<span>
+					<a href='/raspisanie-vks/week.listevents/2022/02/21/-'>8</a></td>
+				</span>
+			</div>
+									<div class="cal_div_daysnoevents cal_div_day0">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/21/-" title="Перейти к календарю – текущий день">21</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное совещание ММЦ ВУО ГАУЗ СО “Ирбитская ЦГБ” г. Ирбит с прикрепленными территориями&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 21. Февраль 2022&lt;br /&gt;09:00 - 10:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/21/12849/-/ezhenedelnoe-soveshchanie-mmts-vuo-gauz-so-irbitskaya-tsgb-g-irbit-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/21/12849/-/ezhenedelnoe-soveshchanie-mmts-vuo-gauz-so-irbitskaya-tsgb-g-irbit-s-prikreplennymi-territoriyami" >09:00 Еженедельное со ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Видеоконференция по вопросу повышения качества и безопасности оказания медицинской помощи в медицинских организаций Свердловской области, оказывающих медицинскую помощь по профилю «акушерство и гинекология».&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 21. Февраль 2022&lt;br /&gt;10:00 - 11:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/21/21445/-/videokonferentsiya-po-voprosu-povysheniya-kachestva-i-bezopasnosti-okazaniya-meditsinskoj-pomoshchi-v-meditsinskikh-organizatsij-sverdlovskoj-oblasti-&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/21/21445/-/videokonferentsiya-po-voprosu-povysheniya-kachestva-i-bezopasnosti-okazaniya-meditsinskoj-pomoshchi-v-meditsinskikh-organizatsij-sverdlovskoj-oblasti-" >10:00 Видеоконференци ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Еженедельное видеоселекторное совещание по ОКС.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 21. Февраль 2022&lt;br /&gt;12:00 - 13:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/21/18901/-/vks-otmenena-organizatorom-ezhenedelnoe-videoselektornoe-soveshchanie-po-oks&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/21/18901/-/vks-otmenena-organizatorom-ezhenedelnoe-videoselektornoe-soveshchanie-po-oks" >12:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 21. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/21/21190/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/21/21190/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day1">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/22/-" title="Перейти к календарю – текущий день">22</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Ежемесячное видеоселекторное совещание ГБУЗ СО &quot;Красноуфимская РБ&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Вторник, 22. Февраль 2022&lt;br /&gt;09:00 - 10:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/22/20881/-/vks-otmenena-organizatorom-ezhemesyachnoe-videoselektornoe-soveshchanie-gbuz-so-krasnoufimskaya-rb-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/22/20881/-/vks-otmenena-organizatorom-ezhemesyachnoe-videoselektornoe-soveshchanie-gbuz-so-krasnoufimskaya-rb-s-prikreplennymi-territoriyami" >09:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельный отчет службы родовспоможения.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Вторник, 22. Февраль 2022&lt;br /&gt;09:00 - 10:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/22/20806/-/ezhenedelnyj-otchet-sluzhby-rodovspomozheniya&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/22/20806/-/ezhenedelnyj-otchet-sluzhby-rodovspomozheniya" >09:00 Еженедельный от ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Ежемесячное совещание &quot;Организационно-методические вопросы маршрутизации пациентов в клинико-диагностическую поликлинику  ГАУЗ СО &quot;СОКБ №1»&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Вторник, 22. Февраль 2022&lt;br /&gt;11:00 - 11:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/22/21134/-/ezhemesyachnoe-soveshchanie-organizatsionno-metodicheskie-voprosy-marshrutizatsii-patsientov-v-kliniko-diagnosticheskuyu-polikliniku-gauz-so-sokb-1&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/22/21134/-/ezhemesyachnoe-soveshchanie-organizatsionno-metodicheskie-voprosy-marshrutizatsii-patsientov-v-kliniko-diagnosticheskuyu-polikliniku-gauz-so-sokb-1" >11:00 Ежемесячное сов ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day2">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/23/-" title="Перейти к календарю – текущий день">23</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Областной акушерский консилиум.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Среда, 23. Февраль 2022&lt;br /&gt;10:00 - 11:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/23/22529/-/oblastnoj-akusherskij-konsilium&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/23/22529/-/oblastnoj-akusherskij-konsilium" >10:00 Областной акуше ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day3">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/24/-" title="Перейти к календарю – текущий день">24</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельная видеоконференция ММЦ ГАУЗ СО &quot;Городская больница город Асбест&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 24. Февраль 2022&lt;br /&gt;10:00 - 10:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/24/13104/-/ezhenedelnaya-videokonferentsiya-mmts-gauz-so-gorodskaya-bolnitsa-gorod-asbest-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/24/13104/-/ezhenedelnaya-videokonferentsiya-mmts-gauz-so-gorodskaya-bolnitsa-gorod-asbest-s-prikreplennymi-territoriyami" >10:00 Еженедельная ви ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное совещание ММЦ ГАУЗ СО &quot;Городская больница № 4 город Нижний Тагил&quot; с прикрепленными территориями.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 24. Февраль 2022&lt;br /&gt;10:00 - 10:40&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/24/14978/-/ezhenedelnoe-soveshchanie-mmts-gauz-so-gorodskaya-bolnitsa-4-gorod-nizhnij-tagil-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/24/14978/-/ezhenedelnoe-soveshchanie-mmts-gauz-so-gorodskaya-bolnitsa-4-gorod-nizhnij-tagil-s-prikreplennymi-territoriyami" >10:00 Еженедельное со ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с КАОП  Свердловской области.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 24. Февраль 2022&lt;br /&gt;13:00 - 14:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/24/20975/-/soveshchanie-s-kaop-sverdlovskoj-oblasti&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/24/20975/-/soveshchanie-s-kaop-sverdlovskoj-oblasti" >13:00 Совещание с КАО ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Видеоселекторное совещание по актуальным вопросам службы детства и родовспоможения под руководством Заместителя Министра здравоохранения Свердловской области Чадовой Е.А&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 24. Февраль 2022&lt;br /&gt;14:30 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/24/13810/-/vks-otmenena-organizatorom-videoselektornoe-soveshchanie-po-aktualnym-voprosam-sluzhby-detstva-i-rodovspomozheniya-pod-rukovodstvom-zamestitelya-minis&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/24/13810/-/vks-otmenena-organizatorom-videoselektornoe-soveshchanie-po-aktualnym-voprosam-sluzhby-detstva-i-rodovspomozheniya-pod-rukovodstvom-zamestitelya-minis" >14:30 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Штаб по координации организации профилактических мероприятий по снижению младенческой смертности на территории Свердловской области.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 24. Февраль 2022&lt;br /&gt;15:00 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/24/21652/-/vks-otmenena-organizatorom-shtab-po-koordinatsii-organizatsii-profilakticheskikh-meropriyatij-po-snizheniyu-mladencheskoj-smertnosti-na-territorii-sve&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/24/21652/-/vks-otmenena-organizatorom-shtab-po-koordinatsii-organizatsii-profilakticheskikh-meropriyatij-po-snizheniyu-mladencheskoj-smertnosti-na-territorii-sve" >15:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи пациентам с COVID-19...&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Четверг, 24. Февраль 2022&lt;br /&gt;17:00 - 18:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/24/21651/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi-patsientam-s-covid-19&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/24/21651/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi-patsientam-s-covid-19" >17:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day4">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/25/-" title="Перейти к календарю – текущий день">25</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное селекторное совещание Регионального сосудистого центра с ПСО&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 25. Февраль 2022&lt;br /&gt;09:30 - 10:45&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/25/12284/-/ezhenedelnoe-selektornoe-soveshchanie-regionalnogo-sosudistogo-tsentra-s-pso&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/25/12284/-/ezhenedelnoe-selektornoe-soveshchanie-regionalnogo-sosudistogo-tsentra-s-pso" >09:30 Еженедельное се ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 25. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/25/21192/-/vks-otmenena-organizatorom-soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/25/21192/-/vks-otmenena-organizatorom-soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное видеоселекторное совещание онкослужбы&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Пятница, 25. Февраль 2022&lt;br /&gt;15:40 - 16:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/25/21076/-/ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/25/21076/-/ezhenedelnoe-videoselektornoe-soveshchanie-onkosluzhby" >15:40 Еженедельное ви ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day5">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/26/-" title="Перейти к календарю – текущий день">26</a>
+															</span>
+						</div>
+												<div class="cal_div_daysnoevents cal_div_day6">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/27/-" title="Перейти к календарю – текущий день">27</a>
+															</span>
+						</div>
+									<div class="divclear"></div>
+		</div>
+				<div class="cal_div_weekrow" >
+			<div class='cal_div_weeklink'>
+				<span>
+					<a href='/raspisanie-vks/week.listevents/2022/02/28/-'>9</a></td>
+				</span>
+			</div>
+									<div class="cal_div_daysnoevents cal_div_day0">
+							<span>
+																<a class="cal_daylink" href="/raspisanie-vks/day.listevents/2022/02/28/-" title="Перейти к календарю – текущий день">28</a>
+																		<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Еженедельное совещание ММЦ ВУО ГАУЗ СО “Ирбитская ЦГБ” г. Ирбит с прикрепленными территориями&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 28. Февраль 2022&lt;br /&gt;09:00 - 10:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/28/12850/-/ezhenedelnoe-soveshchanie-mmts-vuo-gauz-so-irbitskaya-tsgb-g-irbit-s-prikreplennymi-territoriyami&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/28/12850/-/ezhenedelnoe-soveshchanie-mmts-vuo-gauz-so-irbitskaya-tsgb-g-irbit-s-prikreplennymi-territoriyami" >09:00 Еженедельное со ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Видеоконференция по вопросу повышения качества и безопасности оказания медицинской помощи в медицинских организаций Свердловской области, оказывающих медицинскую помощь по профилю «акушерство и гинекология».&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 28. Февраль 2022&lt;br /&gt;10:00 - 11:30&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/28/21446/-/videokonferentsiya-po-voprosu-povysheniya-kachestva-i-bezopasnosti-okazaniya-meditsinskoj-pomoshchi-v-meditsinskikh-organizatsij-sverdlovskoj-oblasti-&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/28/21446/-/videokonferentsiya-po-voprosu-povysheniya-kachestva-i-bezopasnosti-okazaniya-meditsinskoj-pomoshchi-v-meditsinskikh-organizatsij-sverdlovskoj-oblasti-" >10:00 Видеоконференци ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;(ВКС отменена организатором!)Еженедельное видеоселекторное совещание по ОКС.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 28. Февраль 2022&lt;br /&gt;12:00 - 13:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/28/18902/-/vks-otmenena-organizatorom-ezhenedelnoe-videoselektornoe-soveshchanie-po-oks&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/28/18902/-/vks-otmenena-organizatorom-ezhenedelnoe-videoselektornoe-soveshchanie-po-oks" >12:00 (ВКС отменена о ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами &quot;По вопросам оказания медицинской помощи&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 28. Февраль 2022&lt;br /&gt;14:00 - 15:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Повторять событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/28/21193/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/28/21193/-/soveshchanie-s-glavnymi-vrachami-po-voprosam-okazaniya-meditsinskoj-pomoshchi" >14:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																				<div style="width:100%;padding:2px;">
+											<div style="padding:0;border-left:8px solid #ccc;padding-left:2px;"><span class="editlinktip hasjevtip" title="&lt;div class=&quot;jevtt_title&quot; style = &quot;color:#fff;background-color:#ccc&quot;&gt;Совещание с главными врачами под руководством Заместителя Министра здравоохранения Свердловской области А.В. Шастина &quot;По вопросам заполнения отчетов, о работе информационных систем и сервисов, а также о текущей ситуации в работе ИМС&quot;.&lt;/div&gt;" data-content="&lt;div class=&quot;jevtt_text&quot; &gt;Понедельник, 28. Февраль 2022&lt;br /&gt;16:00 - 17:00&lt;br /&gt;&lt;span class=&quot;fwb&quot;&gt;Разовое событие&lt;/span&gt;&lt;hr   class=&quot;jev-click-to-open&quot;/&gt;&lt;small   class=&quot;jev-click-to-open&quot;&gt;&lt;a href=&quot;/raspisanie-vks/icalrepeat.detail/2022/02/28/21653/-/soveshchanie-s-glavnymi-vrachami-pod-rukovodstvom-zamestitelya-ministra-zdravookhraneniya-sverdlovskoj-oblasti-a-v-shastina-po-voprosam-zapolneniya-ot&quot; title=&quot;Кликни, чтобы открыть событие&quot; &gt;Кликни, чтобы открыть событие&lt;/a&gt;&lt;/small&gt;&lt;/div&gt;" >
+<a class="cal_titlelink" href="/raspisanie-vks/icalrepeat.detail/2022/02/28/21653/-/soveshchanie-s-glavnymi-vrachami-pod-rukovodstvom-zamestitelya-ministra-zdravookhraneniya-sverdlovskoj-oblasti-a-v-shastina-po-voprosam-zapolneniya-ot" >16:00 Совещание с гла ...</a>
+</span></div>
+										</div>
+																	</span>
+						</div>
+												<div class="cal_div_daysoutofmonth  cal_div_day1" >
+							<span>
+								Март							</span>
+						</div>
+												<div class="cal_div_daysoutofmonth  cal_div_day2" >
+							<span>
+								Март							</span>
+						</div>
+												<div class="cal_div_daysoutofmonth  cal_div_day3" >
+							<span>
+								Март							</span>
+						</div>
+												<div class="cal_div_daysoutofmonth  cal_div_day4" >
+							<span>
+								Март							</span>
+						</div>
+												<div class="cal_div_daysoutofmonth  cal_div_day5" >
+							<span>
+								Март							</span>
+						</div>
+												<div class="cal_div_daysoutofmonth  cal_div_day6" >
+							<span>
+								Март							</span>
+						</div>
+									<div class="divclear"></div>
+		</div>
+		</div>
+</div>
+</div> <!-- close #jevents //--></div></article>
+
+
+                        </div>
+                        <div class="art-layout-cell art-sidebar1">
+<div class="art-block clearfix"><div class="art-blockcontent"><div class="custom"  >
+	<script src='https://pos.gosuslugi.ru/bin/script.min.js'></script> 
+<style>
+@charset "UTF-8";#js-show-iframe-wrapper{position:relative;display:flex;align-items:center;justify-content:center;width:100%;min-width:293px;max-width:100%;background:linear-gradient(138.4deg,#38bafe 26.49%,#2d73bc 79.45%);color:#fff; cursor: pointer;}#js-show-iframe-wrapper .pos-banner-fluid *{box-sizing:border-box}#js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2{display:block;width:195px;min-height:56px;font-size:18px;line-height:24px;cursor:pointer;background:#0d4cd3;color:#fff;border:none;border-radius:8px;outline:0}#js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:hover{background:#1d5deb}#js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:focus{background:#2a63ad}#js-show-iframe-wrapper .pos-banner-fluid .pos-banner-btn_2:active{background:#2a63ad}@-webkit-keyframes fadeInFromNone{0%{display:none;opacity:0}1%{display:block;opacity:0}100%{display:block;opacity:1}}@keyframes fadeInFromNone{0%{display:none;opacity:0}1%{display:block;opacity:0}100%{display:block;opacity:1}}@font-face{font-family:LatoWebLight;src:url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.woff2) format("woff2"),url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.woff) format("woff"),url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.ttf) format("truetype");font-style:normal;font-weight:400;text-rendering:optimizeLegibility}@font-face{font-family:LatoWeb;src:url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.woff2) format("woff2"),url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.woff) format("woff"),url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.ttf) format("truetype");font-style:normal;font-weight:400;text-rendering:optimizeLegibility}@font-face{font-family:LatoWebBold;src:url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.woff2) format("woff2"),url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.woff) format("woff"),url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.ttf) format("truetype");font-style:normal;font-weight:400;text-rendering:optimizeLegibility}
+</style>
+
+<style>
+#js-show-iframe-wrapper .bf-1{position:relative;display:grid;grid-template-columns:var(--pos-banner-fluid-1__grid-template-columns);grid-template-rows:var(--pos-banner-fluid-1__grid-template-rows);width:100%;max-width:1060px;font-family:LatoWeb,sans-serif;box-sizing:border-box}#js-show-iframe-wrapper .bf-1__decor{grid-column:var(--pos-banner-fluid-1__decor-grid-column);grid-row:var(--pos-banner-fluid-1__decor-grid-row);padding:var(--pos-banner-fluid-1__decor-padding);background:url(https://static.tildacdn.com/tild6661-6137-4639-b731-363365663963/banner-fluid-bg-2-01.svg) var(--pos-banner-fluid-1__decor-bg-position) no-repeat;background-size:var(--pos-banner-fluid-1__decor-bg-size)}#js-show-iframe-wrapper .bf-1__logo-wrap{display:flex;flex-direction:column;align-items:flex-end}#js-show-iframe-wrapper .bf-1__logo{width:128px}#js-show-iframe-wrapper .bf-1__slogan{font-family:LatoWebBold,sans-serif;font-size:var(--pos-banner-fluid-1__slogan-font-size);line-height:var(--pos-banner-fluid-1__slogan-line-height)}#js-show-iframe-wrapper .bf-1__content{padding:var(--pos-banner-fluid-1__content-padding)}#js-show-iframe-wrapper .bf-1__description{display:flex;flex-direction:column;margin-bottom:24px}#js-show-iframe-wrapper .bf-1__text{margin-bottom:12px;font-size:24px;line-height:32px;font-family:LatoWebBold,sans-serif}#js-show-iframe-wrapper .bf-1__text_small{margin-bottom:0;font-size:16px;line-height:24px;font-family:LatoWeb,sans-serif}#js-show-iframe-wrapper .bf-1__btn-wrap{display:flex;align-items:center;justify-content:center}
+</style >
+<div id='js-show-iframe-wrapper'>
+  <div class='pos-banner-fluid bf-1'>
+
+    <div class='bf-1__decor'>
+      <div class='bf-1__logo-wrap'>
+        <img
+          class='bf-1__logo'
+          src='https://pos.gosuslugi.ru/bin/banner-fluid/gosuslugi-logo.svg'
+          alt='Госуслуги'
+        />
+        <div class='bf-1__slogan'>Жалобы на всё</div >
+      </div >
+    </div >
+    <div class='bf-1__content'>
+
+      <div class='bf-1__description'>
+          <span class='bf-1__text'>
+            Вопрос о работе медицинской организации?
+          </span >
+        <span class='pos-banner-fluid__text pos-banner-fluid__text_small'>
+            Столкнулись с проблемой&nbsp;— сообщите о ней!
+          </span >
+      </div >
+
+      <div class='bf-1__btn-wrap'>
+        <!-- pos-banner-btn_2 не удалять; другие классы не добавлять -->
+        <button
+          class='pos-banner-btn_2'
+          type='button'
+        >Подать жалобу
+        </button >
+      </div >
+
+    </div >
+
+  </div >
+</div >
+<script>
+
+(function(){
+  "use strict";
+  var root=document.documentElement,banner=document.getElementById("js-show-iframe-wrapper");function displayWindowSize(){var e=banner.offsetWidth;e<=500&&(root.style.setProperty("--pos-banner-fluid-1__grid-template-columns","100%"),root.style.setProperty("--pos-banner-fluid-1__grid-template-rows","310px auto"),root.style.setProperty("--pos-banner-fluid-1__decor-grid-column","initial"),root.style.setProperty("--pos-banner-fluid-1__decor-grid-row","initial"),root.style.setProperty("--pos-banner-fluid-1__decor-padding","30px 30px 0 30px"),root.style.setProperty("--pos-banner-fluid-1__decor-bg-position","center calc(100% - 10px)"),root.style.setProperty("--pos-banner-fluid-1__decor-bg-size","75% 75%"),root.style.setProperty("--pos-banner-fluid-1__content-padding","0 30px 30px 30px"),root.style.setProperty("--pos-banner-fluid-1__slogan-font-size","24px"),root.style.setProperty("--pos-banner-fluid-1__slogan-line-height","32px")),e>500&&e<=800&&(root.style.setProperty("--pos-banner-fluid-1__grid-template-columns","min-content 1fr"),root.style.setProperty("--pos-banner-fluid-1__grid-template-rows","100%"),root.style.setProperty("--pos-banner-fluid-1__decor-grid-column","2"),root.style.setProperty("--pos-banner-fluid-1__decor-grid-row","1"),root.style.setProperty("--pos-banner-fluid-1__decor-padding","30px 30px 30px 0"),root.style.setProperty("--pos-banner-fluid-1__decor-bg-position","calc(30% - 10px) calc(72% - 2px)"),root.style.setProperty("--pos-banner-fluid-1__decor-bg-size","calc(23% + 150px)"),root.style.setProperty("--pos-banner-fluid-1__content-padding","30px"),root.style.setProperty("--pos-banner-fluid-1__slogan-font-size","24px"),root.style.setProperty("--pos-banner-fluid-1__slogan-line-height","32px")),e>800&&e<=1020&&(root.style.setProperty("--pos-banner-fluid-1__grid-template-columns","min-content 1fr"),root.style.setProperty("--pos-banner-fluid-1__grid-template-rows","100%"),root.style.setProperty("--pos-banner-fluid-1__decor-grid-column","2"),root.style.setProperty("--pos-banner-fluid-1__decor-grid-row","1"),root.style.setProperty("--pos-banner-fluid-1__decor-padding","30px 30px 30px 0"),root.style.setProperty("--pos-banner-fluid-1__decor-bg-position","calc(38% - 50px) calc(6% - 0px)"),root.style.setProperty("--pos-banner-fluid-1__decor-bg-size","420px"),root.style.setProperty("--pos-banner-fluid-1__content-padding","30px"),root.style.setProperty("--pos-banner-fluid-1__slogan-font-size","32px"),root.style.setProperty("--pos-banner-fluid-1__slogan-line-height","40px")),e>1020&&(root.style.setProperty("--pos-banner-fluid-1__grid-template-columns","min-content 1fr"),root.style.setProperty("--pos-banner-fluid-1__grid-template-rows","100%"),root.style.setProperty("--pos-banner-fluid-1__decor-grid-column","2"),root.style.setProperty("--pos-banner-fluid-1__decor-grid-row","1"),root.style.setProperty("--pos-banner-fluid-1__decor-padding","30px 30px 30px 0"),root.style.setProperty("--pos-banner-fluid-1__decor-bg-position","calc(30% - 28px) calc(0% - 40px)"),root.style.setProperty("--pos-banner-fluid-1__decor-bg-size","620px"),root.style.setProperty("--pos-banner-fluid-1__content-padding","30px"),root.style.setProperty("--pos-banner-fluid-1__slogan-font-size","32px"),root.style.setProperty("--pos-banner-fluid-1__slogan-line-height","40px"))}displayWindowSize();var resizeListener=window.addEventListener("resize",displayWindowSize);window.onunload=function(){window.removeEventListener("resize",resizeListener)};
+})()
+
+</script>
+<script>Widget("https://pos.gosuslugi.ru/form", 220024)</script>
+</div></div></div><div class="art-block clearfix"><div class="art-blockheader"><h3 class="t">Госуслуги</h3></div><div class="art-blockcontent"><div class="custom"  >
+	<p><a href="https://www.gosuslugi.ru/"><img src="/Documents/images/Site/uslugi_banner_310518.jpg" alt="" width="100%" height="NaN" /></a></p></div></div></div><div class="art-block clearfix"><div class="art-blockcontent"><div class="bannergroup">
+
+
+</div></div></div>	<table cellpadding="0" cellspacing="0" class="moduletable">
+			<tr>
+			<th>
+				Число посетителей нашего сайта			</th>
+		</tr>
+			<tr>
+			<td>
+				
+<div class="">
+    <div class="cw-mod-traffic-100" id="cwtraffic1">
+                    <div class="cwt-digi-counter">
+                <img class="" src="/media/coalawebtraffic/modules/traffic/digit-themes/black-flip/4.png" alt="4.png"/><img class="" src="/media/coalawebtraffic/modules/traffic/digit-themes/black-flip/5.png" alt="5.png"/><img class="" src="/media/coalawebtraffic/modules/traffic/digit-themes/black-flip/9.png" alt="9.png"/><img class="" src="/media/coalawebtraffic/modules/traffic/digit-themes/black-flip/5.png" alt="5.png"/><img class="" src="/media/coalawebtraffic/modules/traffic/digit-themes/black-flip/0.png" alt="0.png"/><img class="" src="/media/coalawebtraffic/modules/traffic/digit-themes/black-flip/2.png" alt="2.png"/><img class="" src="/media/coalawebtraffic/modules/traffic/digit-themes/black-flip/9.png" alt="9.png"/>            </div>
+                            <div class="cwt-indi-counter-100">
+                                    <div class="cwt-icon">
+                        <span class="cwt-stats-lt-users">Сегодня</span><span class="cw_stats_r0">1195</span>
+                    </div>
+                                	
+                                    <div class="cwt-icon">
+                        <span class="cwt-stats-lw-users">За неделю</span><span class="cw_stats_r0">6750</span>
+                    </div>
+                                                                    <div class="cwt-icon">
+                        <span class="cwt-stats-la-users">Всего</span><span class="cw_stats_r0">4595029</span>
+                    </div>
+                            </div>
+        
+                        
+        
+        
+        
+                    <div class="cwt-datetime">
+        07.10.2026 12:06        </div>
+        
+                        </div>
+</div>
+			</td>
+		</tr>
+		</table>
+	
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+<footer class="art-footer">
+<div class="art-content-layout-wrapper layout-item-0">
+<div class="art-content-layout layout-item-1">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-2" style="width: 100%">
+        <p style="text-align: left;"><span style="color: #FDFCFC;">© 2020 МИАЦ Свердловской области &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+    </div>
+    </div>
+</div>
+</div>
+
+</footer>
+
+    </div>
+</div>
+
+
+
+
+
+<div class="custom"  >
+	<!-- Виджет версии для слабовидящих -->
+<script> 
+d=document,n=d.getElementsByTagName("script")[0],s=d.createElement("script"),s.type="text/javascript",s.async=!0,s.src=("https:"==d.location.protocol?"https:":"http:")+"//special.prolexgroup.ru/api/v1/specversion.js",f=function(){n.parentNode.insertBefore(s,n)},f();
+</script> 
+<!-- /Виджет версии для слабовидящих --></div>
+</body>
+</html>
